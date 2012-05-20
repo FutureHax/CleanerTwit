@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/header"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_alignParentTop="true"
+	    android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/userIV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/acct_sel" />
+	    
+	    <TextView
+	        android:id="@+id/userTV"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Username"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	</LinearLayout>
+
+    <EditText
+        android:id="@+id/keywordET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/header"
+		android:hint="Keyword to search for">
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/searchB"
+        android:layout_below="@+id/keywordET"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+    
+     <include
+	 	android:id="@+id/progress"
+	 	android:layout_width="fill_parent"
+	 	android:layout_height="wrap_content"
+	 	android:layout_centerInParent="true"	        
+	 	layout="@layout/progress" />
+     
+</RelativeLayout>
